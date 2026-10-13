@@ -164,7 +164,7 @@ mysql -u root -p < database/create_database.sql
 The supplied SQL creates the database:
 
 ```text
-writes_peptides
+peptides
 ```
 
 If you want another database name, change the `CREATE DATABASE`, `USE`, and PHP/Python configuration accordingly.
