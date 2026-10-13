@@ -4,9 +4,9 @@ declare(strict_types=1);
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 
 $dbHost = '127.0.0.1';
-$dbUser = 'db_user';
-$dbPass = 'user_pass';
-$dbName = 'database_name';
+$dbUser = 'peptides_user';
+$dbPass = 'CHANGE_ME';
+$dbName = 'peptides';
 
 try {
     $mysqli = new mysqli($dbHost, $dbUser, $dbPass, $dbName);
