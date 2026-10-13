@@ -193,7 +193,7 @@ Example:
 $dbHost = '127.0.0.1';
 $dbUser = 'peptides_user';
 $dbPass = 'CHANGE_ME';
-$dbName = 'writes_peptides';
+$dbName = 'peptides';
 ```
 
 Create a MySQL account with only the permissions this application needs rather than using the MySQL root account.
