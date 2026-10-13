@@ -130,7 +130,7 @@ The interface currently loads Bootstrap, Bootstrap Icons, and Chart.js from CDNs
 │   └── take-dose.php
 ├── assets/
 │   └── app.css
-├── cron_updates/
+├── cron/
 │   ├── build_daily_schedule.py
 │   ├── check_upcoming_reminders.py
 │   └── config.example.py
@@ -243,7 +243,7 @@ The two Python scripts import a local `config.py`.
 Copy:
 
 ```bash
-cp cron_updates/config.example.py cron_updates/config.py
+cp cron/config.example.py cron/config.py
 ```
 
 Then edit the credentials.
@@ -263,13 +263,13 @@ python3 -m pip install PyMySQL
 Typical cron:
 
 ```cron
-5 0 * * * /usr/bin/python3 /path/to/project/cron_updates/build_daily_schedule.py >/dev/null 2>&1
+5 0 * * * /usr/bin/python3 /path/to/project/cron/build_daily_schedule.py >/dev/null 2>&1
 ```
 
 Manual testing:
 
 ```bash
-python3 cron_updates/build_daily_schedule.py --date 2026-10-13 --verbose
+python3 cron/build_daily_schedule.py --date 2026-10-13 --verbose
 ```
 
 The scheduler:
@@ -291,7 +291,7 @@ A `--date` test run does **not** rewrite production cycle anchors unless the req
 Suggested cron:
 
 ```cron
-0 6 * * * /usr/bin/python3 /path/to/project/cron_updates/check_upcoming_reminders.py >/dev/null 2>&1
+0 6 * * * /usr/bin/python3 /path/to/project/cron/check_upcoming_reminders.py >/dev/null 2>&1
 ```
 
 The reminder job:
